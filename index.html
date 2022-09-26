@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ba7b302cfb.js" crossorigin="anonymous"></script>  
 </head>
+<!-- BODY START -->
+<body>
 <!-- HEADER -->
 <header>
     <img src="images/logo/ohmyfood.png" alt="logo ohmyfood">
@@ -19,8 +21,6 @@
         <input type="text" name="location" placeholder="Paris, Belleville">
     </form>
 </header>
-<!-- BODY START -->
-<body>
 <!-- SECTION EXPLORE -->
 <section class="explore-section">
     <div class="explore">
@@ -30,15 +30,85 @@
 </div>
 </section>
 <!-- SECTION FUNCTIONING -->
-<section class="functioning">
+<section class="functioning-section">
     <h1>Fonctionnement</h1>
-    <button class="btn-functioning-step">Choisis ton restaurant</button>
-    <button class="btn-functioning-step">Composez votre menu</button>
-    <button class="btn-functioning-step">Dégustez au restaurant</button>
+    <div class="functioning-step">
+        <p>1</p>
+        <div class="functioning-step-description">
+            <i class="fas fa-mobile"></i>
+            <h4>Choisissez un restaurant</h4>
+        </div>    
+    </div>
+    <div class="functioning-step">
+        <p>2</p>
+        <div class="functioning-step-description">
+            <i class="fas fa-list"></i>
+            <h4>Composez votre menu</h4>
+        </div>    
+    </div>
+    <div class="functioning-step">
+        <p>3</p>
+        <div class="functioning-step-description">
+            <i class="fas fa-store"></i>
+            <h4>Dégustez au restaurant</h4>
+        </div>    
+    </div>
 </section>
 <!-- SECTION LIST RESTAURANTS -->
-<section class="restaurants-list">
+<section class="restaurants-list-section">
     <h1>Restaurants</h1>
+    <div class="restaurants-list">
+        <div class="restaurant-card">
+            <div class="restaurant-card-image">
+                <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+                <div class="new-restaurant-tag">Nouveau</div>
+            </div>
+            <div class="restaurant-card-bottom">
+            <div class="card-restaurant-name-and-city">
+                <div class="card-restaurant-name">La palette du goût</div>
+                <div class="card-restaurant-city">Ménilmontant</div>
+            </div>
+            <i class="fas fa-heart"></i>
+        </div>
+        </div>
+        <div class="restaurant-card">
+            <div class="restaurant-card-image">
+                <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
+                <div class="new-restaurant-tag">Nouveau</div>
+            </div>
+            <div class="restaurant-card-bottom">
+            <div class="card-restaurant-name-and-city">
+                <div class="card-restaurant-name">La note enchantée</div>
+                <div class="card-restaurant-city">Charonne</div>
+            </div>
+            <i class="fas fa-heart"></i>
+        </div>
+        </div>
+        <div class="restaurant-card">
+            <div class="restaurant-card-image">
+                <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
+            </div>
+            <div class="restaurant-card-bottom">
+            <div class="card-restaurant-name-and-city">
+                <div class="card-restaurant-name">A la française</div>
+                <div class="card-restaurant-city">Cité Rouge</div>
+            </div>
+            <i class="fas fa-heart"></i>
+        </div>
+        </div>
+        <div class="restaurant-card">
+            <div class="restaurant-card-image">
+                <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
+            </div>
+            <div class="restaurant-card-bottom">
+            <div class="card-restaurant-name-and-city">
+                <div class="card-restaurant-name">Le délice des sens</div>
+                <div class="card-restaurant-city">Folie-Méricourt</div>
+            </div>
+            <i class="fas fa-heart"></i>
+        </div>
+        </div>
+    </div>
 </section>
 </body>
 <!-- BODY END -->
