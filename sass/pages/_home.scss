@@ -42,8 +42,121 @@ input {
     justify-content: center;
     align-items: center;
     padding-top: 20px;
+    padding-bottom: 50px;
 }
 
 .explore h1 {
     font-weight: bolder;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.explore p {
+    font-weight: lighter;
+    color: #7c7c7c;
+    padding-top: 0;
+    text-align: center;
+}
+
+.functioning-section {
+    padding-left: 20px;
+}
+
+.functioning-step {
+    display: flex;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.functioning-step p {
+    font-size: smaller;
+    display: flex;
+    color: white;
+    background-color: $color-primary;
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.functioning-step-description {
+    display: flex;
+    align-items: center;
+    background-color: #f6f6f6;
+    width: 100%;
+    padding-left: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #0000002e;
+}
+
+.functioning-step-description h4 {
+    padding-left: 20px;
+}
+
+.fa-store {
+    color: $color-primary;
+}
+
+.restaurants-list-section {
+    padding-top: 30px;
+    background-color: #f6f6f6;
+}
+
+.restaurants-list-section h1 {
+    padding-left: 20px;
+}
+
+.restaurants-list {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.restaurant-card {
+    width: 350px;
+    height: 220px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #0000002e;
+    margin-bottom: 20px;
+}
+
+.restaurant-card-image {
+    position: relative;
+}
+
+.restaurant-card img {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 20px 20px;
+    border-top-right-radius: 20px 20px;
+}
+
+.new-restaurant-tag {
+    color: #0d8f6f;
+    background-color: #99e2d0;
+    border-radius: 5px;
+    width: 70px;
+}
+
+.restaurant-card-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 20px;
+}
+
+.card-restaurant-name-and-city {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 5%;
+}
+
+.card-restaurant-name {
+    font-weight: bold;
 }
