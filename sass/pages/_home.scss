@@ -60,12 +60,18 @@ input {
 
 .functioning-section {
     padding-left: 20px;
+    padding-bottom: 20px;
 }
 
 .functioning-step {
     display: flex;
     width: 90%;
     margin-bottom: 20px;
+    align-items: center;
+}
+
+.functioning-step-description:nth-child(3) {
+    background-color: #0d8f6f;
 }
 
 .functioning-step p {
@@ -159,4 +165,43 @@ input {
 
 .card-restaurant-name {
     font-weight: bold;
+}
+
+.fa-heart {
+    font-size: large;
+}
+
+footer {
+    background-color: #353535;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+}
+
+footer img {
+    filter: invert(100%);
+    width: 100px;
+}
+
+footer p {
+    margin-bottom: 0px;
+    margin-top: 7px;
+}
+
+.footer-menu {
+    margin-top: 10px;
+}
+
+.footer-menu-item-with-icon {
+    display: flex;
+    align-items: baseline;
+}
+
+.fa-utensils {
+    padding-right: 5px;
+}
+
+.fa-handshake {
+    padding-right: 5px;
 }
