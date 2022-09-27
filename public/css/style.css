@@ -13,7 +13,6 @@ header {
   align-items: center;
   padding-top: 30px;
 }
-
 header img {
   width: 250px;
   height: auto;
@@ -31,12 +30,10 @@ header img {
   box-shadow: inset 0px 11px 8px -10px #CCC, inset 0px 15px 8px -10px #CCC;
   margin: 0;
 }
-
-.fa-map-marker-alt {
+.form-location .fa-map-marker-alt {
   width: 20px;
 }
-
-input {
+.form-location input {
   border: none;
   background-color: #eaeaea;
   color: #5a5a5a;
@@ -52,13 +49,11 @@ input {
   padding-top: 20px;
   padding-bottom: 50px;
 }
-
 .explore h1 {
   font-weight: bolder;
   margin-bottom: 0;
   text-align: center;
 }
-
 .explore p {
   font-weight: lighter;
   color: #7c7c7c;
@@ -70,15 +65,13 @@ input {
   padding-left: 20px;
   padding-bottom: 20px;
 }
-
-.functioning-step {
+.functioning-section .functioning-step {
   display: flex;
   width: 90%;
   margin-bottom: 20px;
   align-items: center;
 }
-
-.functioning-step p {
+.functioning-section .functioning-step p {
   font-size: smaller;
   display: flex;
   color: white;
@@ -88,10 +81,12 @@ input {
   justify-content: center;
   align-items: center;
   border-radius: 30px;
-  position: relative;
 }
-
-.functioning-step-description {
+.functioning-section .functioning-step-number {
+  position: relative;
+  z-index: 2;
+}
+.functioning-section .functioning-step-description {
   display: flex;
   align-items: center;
   background-color: #f6f6f6;
@@ -100,13 +95,15 @@ input {
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1803921569);
   position: relative;
+  margin-left: -5px;
 }
-
-.functioning-step-description h4 {
+.functioning-section .functioning-step-description h4 {
   padding-left: 20px;
 }
-
-.fa-store {
+.functioning-section .functioning-step-description:hover {
+  background-color: #f5edff;
+}
+.functioning-section .functioning-step-description:hover .fa {
   color: #9356DC;
 }
 
@@ -114,19 +111,16 @@ input {
   padding-top: 30px;
   background-color: #f6f6f6;
 }
-
 .restaurants-list-section h1 {
   padding-left: 20px;
 }
-
-.restaurants-list {
+.restaurants-list-section .restaurants-list {
   padding-left: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
-.restaurant-card {
+.restaurants-list-section .restaurants-list .restaurant-card {
   width: 350px;
   height: 220px;
   border-radius: 20px;
@@ -137,8 +131,7 @@ input {
 .restaurant-card-image {
   position: relative;
 }
-
-.restaurant-card img {
+.restaurant-card-image img {
   height: 150px;
   width: 100%;
   object-fit: cover;
@@ -150,7 +143,15 @@ input {
   color: #0d8f6f;
   background-color: #99e2d0;
   border-radius: 5px;
-  width: 70px;
+  width: 80px;
+  height: 40px;
+  position: relative;
+}
+.new-restaurant-tag span {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .restaurant-card-bottom {
@@ -184,7 +185,6 @@ footer {
   padding-bottom: 20px;
   color: white;
 }
-
 footer img {
   filter: invert(100%);
   width: 100px;
@@ -309,6 +309,15 @@ footer p {
 
 .food-item-card h5 {
   font-weight: 600;
+}
+
+.btn-standard {
+  border-radius: 20px;
+  height: 50px;
+  padding: 10px;
+  color: white;
+  border-style: none;
+  background: linear-gradient(-7deg, #9356DC 4%, #FF79DA 100%);
 }
 
 /*# sourceMappingURL=style.css.map */
