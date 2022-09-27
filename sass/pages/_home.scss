@@ -39,13 +39,13 @@
     background-color: #f6f6f6;
     justify-content: center;
     align-items: center;
-    padding-top: 20px;
+    padding-top: 50px;
     padding-bottom: 50px;
 
     h1 {
         font-weight: bolder;
-        margin-bottom: 0;
         text-align: center;
+        margin: 0;
     }
 
     p {
@@ -53,10 +53,12 @@
         color: #7c7c7c;
         padding-top: 0;
         text-align: center;
+        padding-bottom: 20px;
     }
 }
 
 .functioning-section {
+    padding-top: 30px;
     padding-left: 20px;
     padding-bottom: 20px;
 
@@ -94,6 +96,7 @@
         position: relative;
         margin-left: -5px;
         h4 {
+            font-weight: 500;
             padding-left: 20px;
         }
         &:hover {
@@ -107,6 +110,7 @@
 
 .restaurants-list-section {
     padding-top: 30px;
+    padding-bottom: 30px;
     background-color: #f6f6f6;
     h1 {
         padding-left: 20px;
