@@ -103,7 +103,7 @@ header img {
 .functioning-section .functioning-step-description:hover {
   background-color: #f5edff;
 }
-.functioning-section .functioning-step-description:hover .fa {
+.functioning-section .functioning-step-description:hover .fas {
   color: #9356DC;
 }
 
@@ -121,16 +121,23 @@ header img {
   justify-content: center;
 }
 .restaurants-list-section .restaurants-list .restaurant-card {
-  width: 350px;
+  position: relative;
   height: 220px;
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1803921569);
   margin-bottom: 20px;
+  margin-right: 20px;
+}
+.restaurants-list-section .restaurants-list .restaurant-card h4 {
+  padding-top: 5px;
+  margin: 0;
+}
+.restaurants-list-section .restaurants-list .restaurant-card p {
+  padding-top: 3px;
+  margin: 0;
+  font-weight: lighter;
 }
 
-.restaurant-card-image {
-  position: relative;
-}
 .restaurant-card-image img {
   height: 150px;
   width: 100%;
@@ -140,12 +147,15 @@ header img {
 }
 
 .new-restaurant-tag {
+  top: 10px;
+  right: 10px;
   color: #0d8f6f;
   background-color: #99e2d0;
   border-radius: 5px;
   width: 80px;
   height: 40px;
-  position: relative;
+  position: absolute;
+  z-index: 2;
 }
 .new-restaurant-tag span {
   height: 100%;
@@ -167,15 +177,11 @@ header img {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding-left: 5%;
-}
-
-.card-restaurant-name {
-  font-weight: bold;
+  padding-left: 2%;
 }
 
 .fa-heart {
-  font-size: large;
+  font-size: larger;
 }
 
 footer {
@@ -189,27 +195,24 @@ footer img {
   filter: invert(100%);
   width: 100px;
 }
-
-footer p {
-  margin-bottom: 0px;
-  margin-top: 7px;
+footer .footer-menu-item-with-icon {
+  display: flex;
+  align-items: baseline;
+}
+footer .fas {
+  padding-right: 5px;
+  width: 20px;
+}
+footer a {
+  text-decoration: none;
+  height: 25px;
+}
+footer a:visited {
+  color: white;
 }
 
 .footer-menu {
   margin-top: 10px;
-}
-
-.footer-menu-item-with-icon {
-  display: flex;
-  align-items: baseline;
-}
-
-.fa-utensils {
-  padding-right: 5px;
-}
-
-.fa-handshake {
-  padding-right: 5px;
 }
 
 .top-header-menu-page {
