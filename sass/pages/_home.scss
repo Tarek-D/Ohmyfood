@@ -4,14 +4,13 @@
     flex-direction: column;
     align-items: center;
     padding-top: 30px;
+    img {
+        width: 250px;
+        height: auto;
+        padding-bottom: 20px;
+        margin-bottom: 0;
+    }
  }
-
-header img {
-    width: 250px;
-    height: auto;
-    padding-bottom: 20px;
-    margin-bottom: 0;
-}
 
 .form-location {
     display: flex;
@@ -23,17 +22,15 @@ header img {
     box-shadow: inset 0px 11px 8px -10px #CCC,
                 inset 0px 15px 8px -10px #CCC;
     margin: 0;
-}
-
-.fa-map-marker-alt {
-    width: 20px;
-}
-
-input {
-    border: none;
-    background-color: #eaeaea;
-    color: #5a5a5a;
-    font-weight: 600;
+    .fa-map-marker-alt {
+        width: 20px;
+    }
+    input {
+        border: none;
+        background-color: #eaeaea;
+        color: #5a5a5a;
+        font-weight: 600;
+    }
 }
 
 .explore {
@@ -44,107 +41,118 @@ input {
     align-items: center;
     padding-top: 20px;
     padding-bottom: 50px;
-}
 
-.explore h1 {
-    font-weight: bolder;
-    margin-bottom: 0;
-    text-align: center;
-}
+    h1 {
+        font-weight: bolder;
+        margin-bottom: 0;
+        text-align: center;
+    }
 
-.explore p {
-    font-weight: lighter;
-    color: #7c7c7c;
-    padding-top: 0;
-    text-align: center;
+    p {
+        font-weight: lighter;
+        color: #7c7c7c;
+        padding-top: 0;
+        text-align: center;
+    }
 }
 
 .functioning-section {
     padding-left: 20px;
     padding-bottom: 20px;
-}
 
-.functioning-step {
-    display: flex;
-    width: 90%;
-    margin-bottom: 20px;
-    align-items: center;
-}
-
-.functioning-step p {
-    font-size: smaller;
-    display: flex;
-    color: white;
-    background-color: $color-primary;
-    width: 20px;
-    height: 20px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 30px;
-    position: relative;
+    .functioning-step {
+        display: flex;
+        width: 90%;
+        margin-bottom: 20px;
+        align-items: center;
     
-}
+        p {
+            font-size: smaller;
+        display: flex;
+        color: white;
+        background-color: $color-primary;
+        width: 20px;
+        height: 20px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        }
+    }
+    .functioning-step-number {
+        position: relative;
+        z-index: 2;
+    }
 
-.functioning-step-description {
-    display: flex;
-    align-items: center;
-    background-color: #f6f6f6;
-    width: 100%;
-    padding-left: 20px;
-    border-radius: 20px;
-    box-shadow: 0 0 20px #0000002e;
-    position: relative;
-}
-
-.functioning-step-description h4 {
-    padding-left: 20px;
-}
-
-.fa-store {
-    color: $color-primary;
+    .functioning-step-description {
+        display: flex;
+        align-items: center;
+        background-color: #f6f6f6;
+        width: 100%;
+        padding-left: 20px;
+        border-radius: 20px;
+        box-shadow: 0 0 20px #0000002e;
+        position: relative;
+        margin-left: -5px;
+        h4 {
+            padding-left: 20px;
+        }
+        &:hover {
+            background-color: #f5edff;
+            .fa {
+                color: $color-primary
+            }
+        }
+    }
 }
 
 .restaurants-list-section {
     padding-top: 30px;
     background-color: #f6f6f6;
+    h1 {
+        padding-left: 20px;
+    }
+
+    .restaurants-list {
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .restaurant-card {
+            width: 350px;
+            height: 220px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px #0000002e;
+            margin-bottom: 20px;
+        }
+    }
 }
 
-.restaurants-list-section h1 {
-    padding-left: 20px;
-}
-
-.restaurants-list {
-    padding-left: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.restaurant-card {
-    width: 350px;
-    height: 220px;
-    border-radius: 20px;
-    box-shadow: 0 0 20px #0000002e;
-    margin-bottom: 20px;
-}
 
 .restaurant-card-image {
     position: relative;
-}
-
-.restaurant-card img {
-    height: 150px;
-    width: 100%;
-    object-fit: cover;
-    border-top-left-radius: 20px 20px;
-    border-top-right-radius: 20px 20px;
+    img {
+        height: 150px;
+        width: 100%;
+        object-fit: cover;
+        border-top-left-radius: 20px 20px;
+        border-top-right-radius: 20px 20px;
+    }
 }
 
 .new-restaurant-tag {
     color: #0d8f6f;
     background-color: #99e2d0;
     border-radius: 5px;
-    width: 70px;
+    width: 80px;
+    height: 40px;
+    position: relative;
+    span {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .restaurant-card-bottom {
@@ -177,11 +185,11 @@ footer {
     padding-top: 20px;
     padding-bottom: 20px;
     color: white;
-}
 
-footer img {
-    filter: invert(100%);
-    width: 100px;
+    img {
+        filter: invert(100%);
+        width: 100px;
+    }
 }
 
 footer p {
