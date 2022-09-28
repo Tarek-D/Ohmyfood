@@ -59,13 +59,28 @@
     @media (min-width: $tablet-size) {
         .food-list {
             display: flex;
-            
+            flex-wrap: wrap;
         }
-
         .food-item-card {
             width: 45%;
             height: 50px;
             margin: 10px;
+        }
+
+        .btn-standard {
+                height: 100px;
+                font-size: large;
+            }
+    }
+
+    @media (min-width: $desktop-size) {
+        .food-item-card {
+            width: 25%;
+            height: 100px;
+        }
+
+        .restaurant-menu-header {
+            justify-content: space-around;
         }
     }
 }
