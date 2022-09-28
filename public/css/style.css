@@ -65,6 +65,9 @@ header img {
   text-align: center;
   padding-bottom: 20px;
 }
+.explore .btn-standard {
+  padding: 10px;
+}
 
 .functioning-section {
   padding-top: 30px;
@@ -113,6 +116,13 @@ header img {
 .functioning-section .functioning-step-description:hover .fas {
   color: #9356DC;
 }
+@media (min-width: 768px) {
+  .functioning-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
 
 .restaurants-list-section {
   padding-top: 30px;
@@ -144,6 +154,15 @@ header img {
   padding-top: 3px;
   margin: 0;
   font-weight: lighter;
+}
+@media (min-width: 768px) {
+  .restaurants-list-section .restaurants-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .restaurants-list-section .restaurant-card {
+    width: 45%;
+  }
 }
 
 .restaurant-card-image img {
@@ -275,6 +294,16 @@ footer a:visited {
   justify-content: space-between;
   padding-top: 20px;
   padding-right: 20px;
+}
+@media (min-width: 768px) {
+  .restaurant-menu .food-list {
+    display: flex;
+  }
+  .restaurant-menu .food-item-card {
+    width: 45%;
+    height: 50px;
+    margin: 10px;
+  }
 }
 
 .restaurant-menu h3:after {
