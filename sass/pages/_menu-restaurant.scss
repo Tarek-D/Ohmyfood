@@ -41,11 +41,36 @@
 
     h1 {
         font-family: 'Shrikhand', cursive;
+        @media (min-width: $desktop-size) {
+            font-size: 60;
+        }
+    }
+
+    .fa-heart {
+        font-size: xx-large;
+        @media (min-width: $desktop-size) {
+        font-size: 60;
+        }
     }
 
     h3 {
         font-weight: lighter;
         padding-bottom: 10px;
+
+        &:after {
+            background-color: $color-secondary;
+            bottom: -10px;
+            height: 3px;
+            width: 40px;
+            position: relative;
+            content: "";
+            display: block;
+            font-weight: lighter;
+        }
+
+        @media (min-width: $desktop-size) {
+            font-size: 40;
+        }
     }
 
     .restaurant-menu-header {
@@ -54,46 +79,19 @@
         justify-content: space-between;
         padding-top: 20px;
         padding-right: 20px;
+        @media (min-width: $desktop-size) {
+            justify-content: space-around;
+        }
     }
 
     @media (min-width: $tablet-size) {
         .food-list {
             display: flex;
             flex-wrap: wrap;
-        }
-        .food-item-card {
-            width: 45%;
-            height: 50px;
-            margin: 10px;
-        }
-
-        .btn-standard {
-                height: 100px;
-                font-size: large;
-            }
-    }
-
-    @media (min-width: $desktop-size) {
-        .food-item-card {
-            width: 25%;
-            height: 100px;
-        }
-
-        .restaurant-menu-header {
-            justify-content: space-around;
+            justify-content: space-between;
+            padding-right: 10px;
         }
     }
-}
-
-.restaurant-menu h3:after {
-    background-color: $color-secondary;
-    bottom: -10px;
-    height: 3px;
-    width: 40px;
-    position: relative;
-    content: "";
-    display: block;
-    font-weight: lighter;
 }
 
 .food-item-card {
@@ -104,6 +102,7 @@
     padding: 15px 10px 0 10px;
     margin-bottom: 20px;
     box-shadow: 0 0 20px #0000002e;
+
 
     h4 {
         margin: 0;
@@ -120,11 +119,13 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-
         width: 95%;
     }
 
-    
+    @media (min-width: $desktop-size) {
+        width: 25%;
+        height: 80px;
+    }
 }
 
 .make-order {
@@ -136,5 +137,11 @@
 
     .btn-standard {
         width: 180px;
+        @media (min-width: $desktop-size) {
+            width: 300px;
+            height: 100px;
+            font-size: x-large;
+            border-radius: 10px;
+        }
     }
 }
