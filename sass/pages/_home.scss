@@ -1,16 +1,16 @@
-
- header {
+header {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 30px;
+
     img {
         width: 250px;
         height: auto;
         padding-bottom: 20px;
         margin-bottom: 0;
     }
- }
+}
 
 .form-location {
     display: flex;
@@ -22,14 +22,22 @@
     box-shadow: inset 0px 11px 8px -10px #CCC,
                 inset 0px 15px 8px -10px #CCC;
     margin: 0;
+    @media (min-width: $desktop-size) {
+        height: 100px;
+    }
+
     .fa-map-marker-alt {
         width: 20px;
     }
+
     input {
         border: none;
         background-color: #eaeaea;
         color: #5a5a5a;
         font-weight: 600;
+        @media (min-width: $desktop-size) {
+            font-size: large;
+        }
     }
 }
 
@@ -46,6 +54,12 @@
         font-weight: bolder;
         text-align: center;
         margin: 0;
+
+        @media (min-width: $desktop-size) {
+            display: flex;
+            justify-content: center;
+            font-size: 50;
+        }
     }
 
     p {
@@ -54,25 +68,19 @@
         padding-top: 0;
         text-align: center;
         padding-bottom: 20px;
+
+        @media (min-width: $desktop-size) {
+            font-size: 30;
+        }
     }
 
     .btn-standard {
         padding: 10px;
-    }
 
-    @media (min-width: $desktop-size) {
-        h1 {
-            font-size: 60;
-        }
-
-        p {
-            font-size: 30;
-        }
-        .btn-standard {
+        @media (min-width: $desktop-size) {
             width: 400px;
             font-size: larger;
         }
-
     }
 }
 
@@ -81,7 +89,15 @@
     padding-top: 30px;
     padding-left: 20px;
     padding-bottom: 20px;
-   
+
+    h1 {
+        @media (min-width: $desktop-size) {
+            display: flex;
+            justify-content: center;
+            font-size: 40;
+        }
+    }
+
     .functioning-step {
         display: flex;
         width: 90%;
@@ -90,16 +106,22 @@
 
         p {
             font-size: smaller;
-        display: flex;
-        color: white;
-        background-color: $color-primary;
-        width: 20px;
-        height: 20px;
-        justify-content: center;
-        align-items: center;
-        border-radius: 30px;
+            display: flex;
+            color: white;
+            background-color: $color-primary;
+            width: 20px;
+            height: 20px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30px;
+            @media (min-width: $desktop-size) {
+                width: 50px;
+                height: 50px;
+                font-size: large;
+            }
         }
     }
+
     .functioning-step-number {
         position: relative;
         z-index: 2;
@@ -115,24 +137,22 @@
         box-shadow: 0 0 20px #0000002e;
         position: relative;
         margin-left: -5px;
+
         h4 {
             font-weight: 500;
             padding-left: 20px;
         }
+
         &:hover {
             background-color: #f5edff;
+
             .fas {
                 color: $color-primary
             }
         }
     }
 
-    @media (min-width: $desktop-size) {
-        h1 {
-            display: flex;
-            justify-content: center;
-            font-size: 40;
-        }
+    @media (min-width: $tablet-size) {
 
         .functioning-step-list {
             display: flex;
@@ -142,14 +162,10 @@
                 flex-direction: column;
                 width: 25%;
                 margin: 20px;
+                padding: 5px;
 
                 .functioning-step-number {
                     width: 80px;
-                    p {
-                        width: 50px;
-                        height: 50px;
-                        font-size: large;
-                    }
                 }
             }
         }
@@ -160,9 +176,18 @@
     padding-top: 30px;
     padding-bottom: 30px;
     background-color: #f6f6f6;
+    @media (min-width: $desktop-size) {
+        padding-bottom: 100px;
+    }
 
     h1 {
         padding-left: 20px;
+
+        @media (min-width: $desktop-size) {
+            display: flex;
+            justify-content: center;
+            font-size: 40;
+        }
     }
 
     .restaurants-list {
@@ -171,6 +196,11 @@
         flex-direction: column;
         justify-content: center;
 
+        @media (min-width: $tablet-size) {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
         .restaurant-card {
             position: relative;
             height: 220px;
@@ -178,6 +208,14 @@
             box-shadow: 0 0 20px #0000002e;
             margin-bottom: 20px;
             margin-right: 20px;
+
+            @media (min-width: $tablet-size) {
+                width: 45%;
+            }
+
+            @media (min-width: $desktop-size) {
+                width: 22%;
+            }
 
             h4 {
                 padding-top: 5px;
@@ -189,78 +227,63 @@
                 margin: 0;
                 font-weight: lighter;
             }
+
+            .restaurant-card-image {
+                img {
+                    height: 150px;
+                    width: 100%;
+                    object-fit: cover;
+                    border-top-left-radius: 20px 20px;
+                    border-top-right-radius: 20px 20px;
+                }
+            }
+
+            .new-restaurant-tag {
+                top: 10px;
+                right: 10px;
+                color: #0d8f6f;
+                background-color: #99e2d0;
+                border-radius: 5px;
+                width: 80px;
+                height: 40px;
+                position: absolute;
+                z-index: 2;
+
+                span {
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            .restaurant-card-bottom {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-top: 5px;
+                padding-left: 5px;
+                padding-right: 20px;
+            }
+
+            .card-restaurant-name-and-city {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                padding-left: 2%;
+            }
+
+            .fa-heart {
+                color: transparent;
+                transition: all 350ms;
+                padding: 0px;
+                font-size: x-large;
+                &:hover {
+                    
+                }
+            }
         }
     }
-
-    @media (min-width: $tablet-size) {
-        .restaurants-list {
-            flex-direction: row;
-            flex-wrap: wrap;
-        }
-        .restaurant-card {
-            width: 45%;
-        }
-    }
-
-    @media (min-width: $desktop-size) {
-
-        h1 {
-            display: flex;
-            justify-content: center;
-            font-size: 40;
-        }
-        .restaurant-card {
-            width: 22%;
-        }
-    }
-}
-
-.restaurant-card-image {
-    img {
-        height: 150px;
-        width: 100%;
-        object-fit: cover;
-        border-top-left-radius: 20px 20px;
-        border-top-right-radius: 20px 20px;
-    }
-}
-
-.new-restaurant-tag {
-    top: 10px;
-    right: 10px;
-    color: #0d8f6f;
-    background-color: #99e2d0;
-    border-radius: 5px;
-    width: 80px;
-    height: 40px;
-    position: absolute;
-    z-index: 2;
-    span {
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
-.restaurant-card-bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 5px;
-    padding-left: 5px;
-    padding-right: 20px;
-}
-
-.card-restaurant-name-and-city {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding-left: 2%;
-}
-
-.fa-heart {
-    font-size: larger;
 }
 
 footer {
@@ -270,19 +293,41 @@ footer {
     padding-bottom: 20px;
     color: white;
 
+    @media (min-width: $tablet-size) {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+
+        .footer-logo {
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+        }
+    }
+
     .footer-menu {
         margin-top: 10px;
+
+        @media (min-width: $tablet-size) {
+            display: flex;
+            justify-content: space-around;
+        }
     }
 
     img {
         filter: invert(100%);
         width: 100px;
+
+        @media (min-width: $tablet-size) {
+            width: 250px;
+        }
     }
 
     .footer-menu-item-with-icon {
         display: flex;
         align-items: baseline;
     }
+
     .fas {
         padding-right: 5px;
         width: 20px;
@@ -290,28 +335,5 @@ footer {
 
     a {
         height: 25px;
-        &:visited {
-            color: white;
-        }
     }
-
-    @media (min-width: $tablet-size) {
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-        .footer-menu {
-                display: flex;
-                justify-content: space-around;
-            }
-        .footer-logo {
-                display: flex;
-                justify-content: center;
-                padding-top: 50px;
-
-                img {
-                    width: 250px;
-                }
-            }
-        }
 }
-
