@@ -1,3 +1,12 @@
+@keyframes card-appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .menu-page-header {
     display: flex;
     flex-direction: row;
@@ -102,7 +111,8 @@
     padding: 15px 10px 0 10px;
     margin-bottom: 20px;
     box-shadow: 0 0 20px #0000002e;
-
+    animation-name: card-appear;
+    animation-duration: 4000ms;
 
     h4 {
         margin: 0;
