@@ -14,6 +14,16 @@ a:visited {
   color: white;
 }
 
+.fa-heart {
+  font-weight: 100;
+  font-size: x-large;
+  transition: all 3s linear;
+}
+.fa-heart:hover {
+  font-weight: bold;
+  color: red;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -274,12 +284,7 @@ header img {
   justify-content: space-around;
   padding-left: 2%;
 }
-.restaurants-list-section .restaurants-list .restaurant-card .fa-heart {
-  color: transparent;
-  transition: all 350ms;
-  padding: 0px;
-  font-size: x-large;
-}
+
 footer {
   background-color: #353535;
   padding-left: 20px;
