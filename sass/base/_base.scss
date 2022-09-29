@@ -14,3 +14,13 @@ a {
         color: white;
     }
 }
+
+.fa-heart {
+    font-weight:100;
+    font-size: x-large;
+    transition: all 3s linear;
+    &:hover {
+        font-weight: bold;
+        color: red;
+    }
+}
