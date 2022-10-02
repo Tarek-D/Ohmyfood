@@ -55,11 +55,17 @@ header img {
 .form-location .fa-map-marker-alt {
   width: 20px;
 }
+@media (min-width: 992px) {
+  .form-location .fa-map-marker-alt {
+    font-size: x-large;
+  }
+}
 .form-location input {
   border: none;
   background-color: #eaeaea;
   color: #5a5a5a;
   font-weight: 600;
+  text-align: center;
 }
 @media (min-width: 992px) {
   .form-location input {
@@ -451,6 +457,7 @@ footer a {
 .food-item-card h4 {
   margin: 0;
   font-weight: 800;
+  overflow: hidden;
 }
 .food-item-card p {
   font-weight: lighter;
