@@ -91,7 +91,7 @@ header img {
   .explore h1 {
     display: flex;
     justify-content: center;
-    font-size: 50;
+    font-size: 50px;
   }
 }
 .explore p {
@@ -103,7 +103,7 @@ header img {
 }
 @media (min-width: 992px) {
   .explore p {
-    font-size: 30;
+    font-size: 30px;
   }
 }
 .explore .btn-standard {
@@ -125,7 +125,7 @@ header img {
   .functioning-section h1 {
     display: flex;
     justify-content: center;
-    font-size: 40;
+    font-size: 40px;
   }
 }
 .functioning-section .functioning-step {
@@ -180,6 +180,14 @@ header img {
 @media (min-width: 768px) {
   .functioning-section .functioning-step-list {
     display: flex;
+    padding-right: 20px;
+  }
+  .functioning-section .functioning-step {
+    margin-right: 10px;
+  }
+}
+@media (min-width: 992px) {
+  .functioning-section .functioning-step-list {
     justify-content: space-between;
   }
   .functioning-section .functioning-step-list .functioning-step {
@@ -210,7 +218,7 @@ header img {
   .restaurants-list-section h1 {
     display: flex;
     justify-content: center;
-    font-size: 40;
+    font-size: 40px;
   }
 }
 .restaurants-list-section .restaurants-list {
@@ -338,8 +346,8 @@ footer .fas {
 }
 footer a {
   height: 25px;
+  margin-bottom: 5px;
 }
-
 @keyframes card-appear {
   from {
     opacity: 0;
@@ -348,19 +356,22 @@ footer a {
     opacity: 1;
   }
 }
-.menu-page-header {
+header {
   display: flex;
-  flex-direction: row;
-  padding-top: 10px;
+  align-items: center;
 }
-.menu-page-header img {
-  padding-left: 15%;
-  width: 50%;
-  padding-bottom: 0;
+header img {
   object-fit: cover;
 }
-.menu-page-header .fa-arrow-left {
-  padding-left: 20px;
+@media (min-width: 768px) {
+  header img {
+    width: 200px;
+  }
+}
+header .fa-arrow-left {
+  position: absolute;
+  top: 30;
+  left: 20;
   font-size: x-large;
   color: black;
 }
@@ -371,6 +382,11 @@ footer a {
   bottom: -10px;
   align-items: center;
   position: relative;
+}
+@media (min-width: 992px) {
+  .restaurant-image {
+    height: 400px;
+  }
 }
 .restaurant-image img {
   object-fit: cover;
@@ -387,12 +403,18 @@ footer a {
   background-color: #f6f6f6;
   position: relative;
 }
+@media (min-width: 992px) {
+  .restaurant-menu {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
 .restaurant-menu h1 {
   font-family: "Shrikhand", cursive;
 }
 @media (min-width: 992px) {
   .restaurant-menu h1 {
-    font-size: 60;
+    font-size: 4Opx;
   }
 }
 .restaurant-menu .fa-heart {
@@ -400,7 +422,7 @@ footer a {
 }
 @media (min-width: 992px) {
   .restaurant-menu .fa-heart {
-    font-size: 60;
+    font-size: 40px;
   }
 }
 .restaurant-menu h3 {
@@ -419,7 +441,7 @@ footer a {
 }
 @media (min-width: 992px) {
   .restaurant-menu h3 {
-    font-size: 40;
+    font-size: 30px;
   }
 }
 .restaurant-menu .restaurant-menu-header {
@@ -428,11 +450,6 @@ footer a {
   justify-content: space-between;
   padding-top: 20px;
   padding-right: 20px;
-}
-@media (min-width: 992px) {
-  .restaurant-menu .restaurant-menu-header {
-    justify-content: space-around;
-  }
 }
 @media (min-width: 768px) {
   .restaurant-menu .food-list {
@@ -444,12 +461,12 @@ footer a {
 }
 
 .food-item-card {
-  width: 90%;
   height: 50px;
   background-color: white;
   border-radius: 20px;
   padding: 15px 10px 0 10px;
   margin-bottom: 20px;
+  margin-right: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1803921569);
   animation-name: card-appear;
   animation-duration: 4000ms;
@@ -461,8 +478,8 @@ footer a {
 }
 .food-item-card p {
   font-weight: lighter;
-  margin-top: 7px;
   font-size: small;
+  margin: 0;
 }
 .food-item-card .food-item-card-bottom {
   display: flex;
@@ -470,10 +487,15 @@ footer a {
   align-items: center;
   width: 95%;
 }
+@media (min-width: 768px) {
+  .food-item-card {
+    width: 45%;
+  }
+}
 @media (min-width: 992px) {
   .food-item-card {
-    width: 25%;
-    height: 80px;
+    width: 270px;
+    margin: 0;
   }
 }
 
@@ -485,12 +507,12 @@ footer a {
   justify-content: center;
 }
 .make-order .btn-standard {
-  width: 180px;
+  width: 150px;
 }
 @media (min-width: 992px) {
   .make-order .btn-standard {
-    width: 300px;
-    height: 100px;
+    width: 200px;
+    height: 70px;
     font-size: x-large;
     border-radius: 10px;
   }
