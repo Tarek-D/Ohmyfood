@@ -7,19 +7,21 @@
     }
 }
 
-.menu-page-header {
+header {
     display: flex;
-    flex-direction: row;
-    padding-top: 10px;
+    align-items: center;
     img {
-        padding-left: 15%;
-        width: 50%;
-        padding-bottom: 0;
+       
         object-fit: cover;
+        @media (min-width: $tablet-size) {
+            width: 200px;
+        }
     }
 
     .fa-arrow-left {
-        padding-left: 20px;
+        position: absolute;
+        top: 30;
+        left: 20;
         font-size: x-large;
         color: black;
     }
@@ -31,6 +33,9 @@
     bottom: -10px;
     align-items: center;
     position: relative;
+    @media (min-width: $desktop-size) {
+        height: 400px;
+    }
 
     img {
         object-fit: cover;
@@ -48,17 +53,22 @@
     background-color: #f6f6f6;
     position: relative;
 
+    @media (min-width: $desktop-size) {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
     h1 {
         font-family: 'Shrikhand', cursive;
         @media (min-width: $desktop-size) {
-            font-size: 60;
+            font-size: 4Opx;
         }
     }
 
     .fa-heart {
         font-size: xx-large;
         @media (min-width: $desktop-size) {
-        font-size: 60;
+        font-size: 40px;
         }
     }
 
@@ -78,7 +88,7 @@
         }
 
         @media (min-width: $desktop-size) {
-            font-size: 40;
+            font-size: 30px;
         }
     }
 
@@ -88,9 +98,6 @@
         justify-content: space-between;
         padding-top: 20px;
         padding-right: 20px;
-        @media (min-width: $desktop-size) {
-            justify-content: space-around;
-        }
     }
 
     @media (min-width: $tablet-size) {
@@ -104,12 +111,13 @@
 }
 
 .food-item-card {
-    width: 90%;
+    
     height: 50px;
     background-color: white;
     border-radius: 20px;
     padding: 15px 10px 0 10px;
     margin-bottom: 20px;
+    margin-right: 20px;
     box-shadow: 0 0 20px #0000002e;
     animation-name: card-appear;
     animation-duration: 4000ms;
@@ -122,8 +130,8 @@
 
     p {
         font-weight: lighter;
-        margin-top: 7px;
         font-size: small;
+        margin: 0;
     }
 
     .food-item-card-bottom {
@@ -132,10 +140,13 @@
         align-items: center;
         width: 95%;
     }
+    @media (min-width: $tablet-size) {
+        width: 45%;
+    }
 
     @media (min-width: $desktop-size) {
-        width: 25%;
-        height: 80px;
+        width: 270px;
+        margin: 0;
     }
 }
 
@@ -147,10 +158,10 @@
     justify-content: center;
 
     .btn-standard {
-        width: 180px;
+        width: 150px;
         @media (min-width: $desktop-size) {
-            width: 300px;
-            height: 100px;
+            width: 200px;
+            height: 70px;
             font-size: x-large;
             border-radius: 10px;
         }
