@@ -72,7 +72,7 @@ header {
         @media (min-width: $desktop-size) {
             display: flex;
             justify-content: center;
-            font-size: 50;
+            font-size: 50px;
         }
     }
 
@@ -84,7 +84,7 @@ header {
         padding-bottom: 20px;
 
         @media (min-width: $desktop-size) {
-            font-size: 30;
+            font-size: 30px;
         }
     }
 
@@ -108,7 +108,7 @@ header {
         @media (min-width: $desktop-size) {
             display: flex;
             justify-content: center;
-            font-size: 40;
+            font-size: 40px;
         }
     }
 
@@ -167,9 +167,19 @@ header {
     }
 
     @media (min-width: $tablet-size) {
-
         .functioning-step-list {
             display: flex;
+            padding-right: 20px;
+        }
+        .functioning-step {
+            margin-right: 10px;
+        }
+    }
+
+    @media (min-width: $desktop-size) {
+
+        .functioning-step-list {
+            
             justify-content: space-between;
 
             .functioning-step {
@@ -200,7 +210,7 @@ header {
         @media (min-width: $desktop-size) {
             display: flex;
             justify-content: center;
-            font-size: 40;
+            font-size: 40px;
         }
     }
 
@@ -339,5 +349,10 @@ footer {
 
     a {
         height: 25px;
+        margin-bottom: 5px;
+    }
+
+    a:nth-child(4) {
+        
     }
 }
