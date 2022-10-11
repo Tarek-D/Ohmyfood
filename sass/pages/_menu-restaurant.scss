@@ -58,6 +58,8 @@ header {
     }
 
     .fa-heart {
+        display: flex;
+
         font-size: xx-large;
         @media (min-width: $desktop-size) {
         font-size: 40px;
@@ -114,6 +116,7 @@ header {
     box-shadow: 0 0 20px #0000002e;
     animation: card-appear 2s;
     overflow: hidden;
+    cursor: pointer;
 
     .food-card-content {
         padding: 10px;
