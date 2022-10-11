@@ -12,28 +12,27 @@ a {
     text-decoration: none;
     color: white;
 }
-.fa {
-        font-weight: 100;
+// .fa {
+//         font-weight: 100;
+// }
 
-}
-
-.fa-heart {
-    font-weight: 100;
-    font-size: 30px;
+// .fa-heart {
+//     font-weight: 100;
+//     font-size: 30px;
 
 
-    &:hover {
-        color: $color-primary;
-        font-weight: bolder;
-        transition: all 2s linear ;
-    }
-}
+//     &:hover {
+//         color: $color-primary;
+//         font-weight: bolder;
+//         transition: all 2s linear ;
+//     }
+// }
 
-@keyframes heart-animation {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
+// @keyframes heart-animation {
+//     0% {
+//       opacity: 0;
+//     }
+//     100% {
+//       opacity: 1;
+//     }
+//   }
