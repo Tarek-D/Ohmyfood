@@ -1,11 +1,3 @@
-@keyframes card-appear {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
 
 header {
     display: flex;
@@ -111,21 +103,27 @@ header {
 }
 
 .food-item-card {
-    
+    display: flex;
+    flex-direction: row;
     height: 50px;
     background-color: white;
     border-radius: 20px;
-    padding: 15px 10px 0 10px;
+    padding: 0;
     margin-bottom: 20px;
     margin-right: 20px;
     box-shadow: 0 0 20px #0000002e;
-    animation-name: card-appear;
-    animation-duration: 4000ms;
+    animation: card-appear 2s;
+    overflow: hidden;
+
+    .food-card-content {
+        padding: 10px;
+        width: 100%;
+    }
 
     h4 {
         margin: 0;
         font-weight: 800;
-        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     p {
@@ -138,8 +136,63 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 95%;
+        width: 100%;
     }
+
+    .check-item {
+        display: none;
+        align-items: center;
+        margin-right: 0;
+        background-color: $color-secondary;
+        width: 5%;
+
+        .fa-circle-check {
+            color: white;
+            font-size: 20px;
+            background-color: $color-secondary;
+        }
+    }
+
+    &:hover {
+        .fa-circle-check {
+            transform: rotate(360deg);
+            transition: transform 1s linear;
+        }
+        .check-item {
+            display: flex;
+            justify-content: center;
+            animation: validate 500ms linear;
+        }
+
+        @keyframes validate {
+            from {
+                width: 0;
+            }
+            to {
+                width: 20%;
+            }
+        }
+
+        @keyframes rotatein {
+            from {
+              transform: rotate(-180deg);
+            }
+            to {
+              transform: rotate(0);
+            }
+          }
+          
+          @keyframes rotateout {
+            from {
+              transform: rotate(0);
+            }
+            to {
+              transform: rotate(360deg);
+            }
+          }
+    }
+
+
     @media (min-width: $tablet-size) {
         width: 45%;
     }
@@ -160,10 +213,22 @@ header {
     .btn-standard {
         width: 150px;
         @media (min-width: $desktop-size) {
+            margin-top: 50px;
             width: 200px;
             height: 70px;
             font-size: x-large;
             border-radius: 10px;
         }
+    }
+}
+
+@keyframes card-appear {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

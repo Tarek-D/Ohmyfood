@@ -14,14 +14,173 @@ a:visited {
   color: white;
 }
 
+.fa {
+  font-weight: 100;
+}
+
 .fa-heart {
   font-weight: 100;
-  font-size: x-large;
-  transition: all 3s linear;
+  font-size: 30px;
 }
 .fa-heart:hover {
-  font-weight: bold;
-  color: red;
+  color: #9356DC;
+  font-weight: bolder;
+  transition: all 2s linear;
+}
+
+@keyframes heart-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.loader_section {
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background: white;
+  -webkit-animation: fadeout 3s forwards;
+  animation: fadeout 3s forwards;
+  z-index: 3;
+}
+.loader_section p {
+  padding-top: 20px;
+  color: #9356DC;
+  text-transform: uppercase;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+
+.loader_quart {
+  border-radius: 50px;
+  border: 6px solid #f5edff;
+}
+
+.loader_quart:after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  bottom: -6px;
+  right: -6px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border: 6px solid transparent;
+  border-top-color: #9356DC;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes fadeout {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  90% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  90% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+@keyframes loading-spin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 100%;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0%;
+    visibility: hidden;
+  }
+}
+@keyframes loading-page {
+  0% {
+    opacity: 100%;
+    width: 100%;
+    height: 100%;
+  }
+  100% {
+    width: 0%;
+    height: 0%;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.loading-spinner {
+  position: absolute;
+  background: #9356DC;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: loading-page 5s linear infinite;
+}
+.loading-spinner::before {
+  width: 100px;
+  height: 100px;
+}
+.loading-spinner::after {
+  content: " ";
+  opacity: 0%;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #9356DC;
+  border-color: #9356DC #99E2D0 #9356DC #FF79DA;
+  animation: loading-spin 5s linear 0s;
 }
 
 header {
@@ -348,14 +507,6 @@ footer a {
   height: 25px;
   margin-bottom: 5px;
 }
-@keyframes card-appear {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 header {
   display: flex;
   align-items: center;
@@ -461,20 +612,26 @@ header .fa-arrow-left {
 }
 
 .food-item-card {
+  display: flex;
+  flex-direction: row;
   height: 50px;
   background-color: white;
   border-radius: 20px;
-  padding: 15px 10px 0 10px;
+  padding: 0;
   margin-bottom: 20px;
   margin-right: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1803921569);
-  animation-name: card-appear;
-  animation-duration: 4000ms;
+  animation: card-appear 2s;
+  overflow: hidden;
+}
+.food-item-card .food-card-content {
+  padding: 10px;
+  width: 100%;
 }
 .food-item-card h4 {
   margin: 0;
   font-weight: 800;
-  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .food-item-card p {
   font-weight: lighter;
@@ -485,7 +642,52 @@ header .fa-arrow-left {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 95%;
+  width: 100%;
+}
+.food-item-card .check-item {
+  display: none;
+  align-items: center;
+  margin-right: 0;
+  background-color: #99E2D0;
+  width: 5%;
+}
+.food-item-card .check-item .fa-circle-check {
+  color: white;
+  font-size: 20px;
+  background-color: #99E2D0;
+}
+.food-item-card:hover .fa-circle-check {
+  transform: rotate(360deg);
+  transition: transform 1s linear;
+}
+.food-item-card:hover .check-item {
+  display: flex;
+  justify-content: center;
+  animation: validate 500ms linear;
+}
+@keyframes validate {
+  from {
+    width: 0;
+  }
+  to {
+    width: 20%;
+  }
+}
+@keyframes rotatein {
+  from {
+    transform: rotate(-180deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+@keyframes rotateout {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 @media (min-width: 768px) {
   .food-item-card {
@@ -511,6 +713,7 @@ header .fa-arrow-left {
 }
 @media (min-width: 992px) {
   .make-order .btn-standard {
+    margin-top: 50px;
     width: 200px;
     height: 70px;
     font-size: x-large;
@@ -518,6 +721,16 @@ header .fa-arrow-left {
   }
 }
 
+@keyframes card-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .btn-standard {
   border-radius: 30px;
   height: 40px;

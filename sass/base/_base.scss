@@ -14,13 +14,26 @@ a {
         color: white;
     }
 }
+.fa {
+        font-weight: 100;
+
+}
 
 .fa-heart {
-    font-weight:100;
-    font-size: x-large;
-    transition: all 3s linear;
+    font-weight: 100;
+    font-size: 30px;
     &:hover {
-        font-weight: bold;
-        color: red;
+        color: $color-primary;
+        font-weight: bolder;
+        transition: all 2s linear ;
     }
 }
+
+@keyframes heart-animation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
