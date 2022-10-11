@@ -12,8 +12,8 @@ header {
 
     .fa-arrow-left {
         position: absolute;
-        top: 30;
-        left: 20;
+        top: 30px;
+        left: 20px;
         font-size: x-large;
         color: black;
     }
@@ -53,7 +53,7 @@ header {
     h1 {
         font-family: 'Shrikhand', cursive;
         @media (min-width: $desktop-size) {
-            font-size: 4Opx;
+            font-size: 25px;
         }
     }
 
@@ -105,7 +105,7 @@ header {
 .food-item-card {
     display: flex;
     flex-direction: row;
-    height: 50px;
+    height: 60px;
     background-color: white;
     border-radius: 20px;
     padding: 0;
@@ -118,12 +118,13 @@ header {
     .food-card-content {
         padding: 10px;
         width: 100%;
+        text-overflow: ellipsis;
     }
 
     h4 {
         margin: 0;
         font-weight: 800;
-        text-overflow: ellipsis;
+        
     }
 
     p {
@@ -140,28 +141,39 @@ header {
     }
 
     .check-item {
-        display: none;
+        //display: none;
+        display: flex;
+        justify-content: center;
         align-items: center;
         margin-right: 0;
         background-color: $color-secondary;
-        width: 5%;
-
+        width: 0;
+        animation: unmark 500ms linear;
+        
+        @keyframes unmark {
+            from {
+                width: 20%;
+            }
+            to {
+                width: 0;
+            }
+        }
         .fa-circle-check {
             color: white;
             font-size: 20px;
-            background-color: $color-secondary;
         }
     }
 
     &:hover {
         .fa-circle-check {
-            transform: rotate(360deg);
-            transition: transform 1s linear;
+            animation: rotate 500ms linear;
+            
         }
         .check-item {
             display: flex;
             justify-content: center;
             animation: validate 500ms linear;
+            width: 20%;
         }
 
         @keyframes validate {
@@ -173,18 +185,9 @@ header {
             }
         }
 
-        @keyframes rotatein {
+        @keyframes rotate {
             from {
-              transform: rotate(-180deg);
-            }
-            to {
-              transform: rotate(0);
-            }
-          }
-          
-          @keyframes rotateout {
-            from {
-              transform: rotate(0);
+              transform: rotate(0deg);
             }
             to {
               transform: rotate(360deg);
