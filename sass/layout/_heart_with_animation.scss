@@ -1,0 +1,33 @@
+.fa-heart {
+
+  &:hover {
+    transition: opacity 200ms ease-in-out;
+  }
+
+  &:hover::after {
+    opacity: 0;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+
+  &::after {
+    content: "\f004";
+    position: absolute;
+    opacity: 1;
+    font-weight: 100;
+    align-self: center;
+    transition: opacity 400ms ease-in;
+    
+  }
+
+  &::before {
+    opacity: 0;
+    background: linear-gradient($color-primary, $color-tertiary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: opacity 400ms ease-out;
+    font-weight: 600;
+  }
+}
