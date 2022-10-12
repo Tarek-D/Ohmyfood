@@ -427,6 +427,7 @@ header img {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1803921569);
   margin-bottom: 20px;
   margin-right: 20px;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .restaurants-list-section .restaurants-list .restaurant-card {
