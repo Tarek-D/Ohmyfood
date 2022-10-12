@@ -48,6 +48,8 @@ header {
     @media (min-width: $desktop-size) {
         padding-left: 50px;
         padding-right: 50px;
+        max-width: 1024px;
+        margin: auto;
     }
 
     h1 {
@@ -99,7 +101,6 @@ header {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            padding-right: 10px;
         }
     }
 }
