@@ -609,8 +609,10 @@ header .fa-arrow-left {
   margin-right: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1803921569);
   animation: card-appear 2s;
-  overflow: hidden;
   cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .food-item-card .food-card-content {
   padding: 10px;
