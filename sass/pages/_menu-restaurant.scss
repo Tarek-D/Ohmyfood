@@ -116,8 +116,10 @@ header {
     margin-right: 20px;
     box-shadow: 0 0 20px #0000002e;
     animation: card-appear 2s;
-    overflow: hidden;
     cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     .food-card-content {
         padding: 10px;
