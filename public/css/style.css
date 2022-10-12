@@ -543,6 +543,8 @@ header .fa-arrow-left {
   .restaurant-menu {
     padding-left: 50px;
     padding-right: 50px;
+    max-width: 1024px;
+    margin: auto;
   }
 }
 .restaurant-menu h1 {
@@ -593,7 +595,6 @@ header .fa-arrow-left {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-right: 10px;
   }
 }
 
