@@ -151,7 +151,6 @@ header {
     }
 
     .check-item {
-        //display: none;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -205,13 +204,12 @@ header {
           }
     }
 
-
     @media (min-width: $tablet-size) {
         width: 45%;
     }
 
     @media (min-width: $desktop-size) {
-        width: 300px;
+        width: 270px;
         margin: 0;
     }
 }
