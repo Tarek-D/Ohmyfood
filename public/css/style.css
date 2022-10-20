@@ -618,15 +618,20 @@ header .fa-arrow-left {
   padding: 10px;
   width: 100%;
   text-overflow: ellipsis;
+  overflow: hidden;
 }
 .food-item-card h4 {
   margin: 0;
   font-weight: 800;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .food-item-card p {
   font-weight: lighter;
   font-size: small;
   margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .food-item-card .food-item-card-bottom {
   display: flex;
