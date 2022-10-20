@@ -125,18 +125,22 @@ header {
         padding: 10px;
         width: 100%;
         text-overflow: ellipsis;
+        overflow: hidden;
     }
 
     h4 {
         margin: 0;
         font-weight: 800;
-        
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
 
     p {
         font-weight: lighter;
         font-size: small;
         margin: 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
 
     .food-item-card-bottom {
@@ -207,7 +211,7 @@ header {
     }
 
     @media (min-width: $desktop-size) {
-        width: 270px;
+        width: 300px;
         margin: 0;
     }
 }
