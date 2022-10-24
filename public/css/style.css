@@ -693,7 +693,6 @@ header .fa-arrow-left {
 @media (min-width: 992px) {
   .food-item-card {
     width: 270px;
-    margin: 0;
   }
 }
 
