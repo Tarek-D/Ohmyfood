@@ -115,11 +115,24 @@ header {
     margin-bottom: 20px;
     margin-right: 20px;
     box-shadow: 0 0 20px #0000002e;
-    animation: card-appear 2s;
+    animation: card-appear 2s ease forwards;
     cursor: pointer;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    opacity: 0;
+
+    &:nth-child(2) {
+        animation-delay: 500ms;
+    }
+
+    &:nth-child(3) {
+        animation-delay: 900ms;
+    }
+
+    &:nth-child(4) {
+        animation-delay: 1200ms;
+    }
 
     .food-card-content {
         padding: 10px;
@@ -171,6 +184,12 @@ header {
             color: white;
             font-size: 20px;
         }
+    }
+
+    .fa-check-circle:before, .fa-circle-check:before {
+        content: "\f058";
+        color: white;
+        font-weight: 600;
     }
 
     &:hover {
@@ -236,7 +255,7 @@ header {
 @keyframes card-appear {
     0% {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(100%);
     }
     100% {
         opacity: 1;
